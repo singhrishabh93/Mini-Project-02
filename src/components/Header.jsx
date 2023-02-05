@@ -1,6 +1,8 @@
 import React from "react"
 import Logo from "./img/logo.png"   //logo initialized
 import { MdShoppingBasket, MdAdd, MdLogout } from "react-icons/md"; //cart logo initilized
+import Avatar from "./img/avatar.png"
+
 const Header = () => {
     return(
         <header className="fixed z-50 w-screen  p-6 px-16">
@@ -19,11 +21,12 @@ const Header = () => {
                 </ul>
 
                 <div className="relative flex items-center justify-center">
-                    <MdShoppingBasket className="text-textColor text-2xl ml-8 cursor-pointer"/> {/*cart icon text color and size*/}
+                    <MdShoppingBasket className="text-textColor text-2xl cursor-pointer"/> {/*cart icon text color and size*/}
                     <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cartNumBg flex items-center justify-center"> {/*cart amount items amount*/}
                         <p className="text-sm text-white font-semibold">2</p> 
                     </div>
                 </div>
+                <img src={Avatar} className="w-10 min-w-[40px] h-10 min-h-[40px] drop-shadow-xl" alt="userprofile"/>
                 </div>
             </div>
             {/* for mobile for small device flexible and for medium device it should be hidden*/}
